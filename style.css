@@ -142,3 +142,19 @@ footer {
 .navbar a:hover {
     color: #fceabb;
 }
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Pour plus d’informations, écrivez-nous à : <a href="mailto:contact@italievoyage.com">contact@italievoyage.com</a></p>
+    </div>
+</section>.contact {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact a {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+}
