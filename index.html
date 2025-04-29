@@ -68,7 +68,26 @@
             </div>
         </div>
     </section>
+<script>
+  document.getElementById("quiz-form").addEventListener("submit", function(event){
+    event.preventDefault();
+    var question1 = document.getElementById("question1").value;
+    var question2 = document.getElementById("question2").value;
 
+    var destination = "";
+    if (question1 === "plage" && question2 === "animee") {
+        destination = "Sicile – Plages et vie nocturne animée!";
+    } else if (question1 === "histoire" && question2 === "relaxante") {
+        destination = "Florence – Culture et détente au cœur de la Toscane!";
+    } else if (question1 === "aventure" && question2 === "romantique") {
+        destination = "Naples et Capri – Aventure et romantisme au bord de la mer!";
+    } else {
+        destination = "Venez découvrir l'Italie, chaque région est unique!";
+    }
+
+    document.getElementById("resultat").innerHTML = "Ta destination idéale est : <strong>" + destination + "</strong>";
+  });
+</script>
     <footer>
         <p>© 2025 - Voyages en Italie | Tous droits réservés</p>
     </footer>
