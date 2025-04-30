@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- AJOUT EN ROUGE : STYLE POUR GASTRONOMIE ET QUIZ -->
+    <!-- STYLE POUR GASTRONOMIE ET QUIZ -->
     <style>
         .gastronomie {
             background: #fff8f0;
@@ -107,7 +107,7 @@
         </div>
     </section>
 
-    <!-- AJOUT EN ROUGE : SECTION GASTRONOMIE -->
+    <!-- SECTION GASTRONOMIE -->
     <section id="gastronomie" class="gastronomie">
         <div class="container">
             <h2>Gastronomie Italienne</h2>
@@ -165,7 +165,7 @@
         </div>
     </section>
 
-    <!-- CORRECTION QUIZ -->
+    <!-- SECTION QUIZ -->
     <section id="quiz" class="quiz">
         <div class="container">
             <h2>Quel type de voyageur êtes-vous ?</h2>
@@ -194,4 +194,37 @@
         <p>© 2025 - Voyages en Italie | Tous droits réservés</p>
     </footer>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("quiz-form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const question1 = document.getElementById("question1").value;
+                const question2 = document.getElementById("question2").value;
+
+                let destination = "";
+
+                if (question1 === "plage" && question2 === "animee") {
+                    destination = "Sicile – Plages et vie nocturne animée!";
+                } else if (question1 === "histoire" && question2 === "relaxante") {
+                    destination = "Florence – Culture et détente au cœur de la Toscane!";
+                } else if (question1 === "aventure" && question2 === "romantique") {
+                    destination = "Naples et Capri – Aventure et romantisme au bord de la mer!";
+                } else {
+                    destination = "Venez découvrir l'Italie, chaque région est unique!";
+                }
+
+                document.getElementById("resultat").innerHTML =
+                    "Ta destination idéale est : <strong>" + destination + "</strong>";
+            });
+        });
+    </script>
+
+</body>
+</html>
+
