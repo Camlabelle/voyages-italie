@@ -1,205 +1,233 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Voyages en Italie</title>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-    nav {
-      background: #333;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      margin: 0;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    header {
-      background: #f2f2f2;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    h1, h2 {
-      margin: 0 0 20px;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .card {
-      width: 240px;
-      background: #fafafa;
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-      border-radius: 8px;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 5px;
-    }
-    .map-container {
-      width: 100%;
-      height: 400px;
-      margin-bottom: 30px;
-      border: 1px solid #ccc;
-      background-image: url('images/italy-map.jpg'); /* Remplacez par votre propre image de carte */
-      background-size: cover;
-      background-position: center;
-    }
-    .lieux h3 {
-      color: #d33;
-      margin-top: 30px;
-    }
-    .lieux ul {
-      padding-left: 20px;
-    }
-    .lieux li {
-      margin-bottom: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Voyages en Italie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- STYLE POUR GASTRONOMIE ET QUIZ -->
+    <style>
+        .gastronomie {
+            background: #fff8f0;
+            padding: 40px 0;
+            animation: fadeInLoop 5s infinite;
+            text-align: center;
+        }
+
+        .gastronomie h2 {
+            color: #d33;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .gastronomie p {
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        @keyframes fadeInLoop {
+            0%, 100% { background-color: #fff8f0; }
+            50% { background-color: #ffe0d0; }
+        }
+
+        #resultat {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #b22222;
+        }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="#top">Accueil</a></li>
-      <li><a href="#destinations">Destinations</a></li>
-      <li><a href="#gastronomie">Gastronomie</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#carte">Carte</a></li>
-    </ul>
-  </nav>
-
-  <header id="top">
-    <div class="container">
-      <h1>Voyages en Italie</h1>
-      <p>Découvrez les plus belles villes italiennes</p>
-    </div>
-  </header>
-
-  <section id="destinations" class="destinations">
-    <div class="container">
-      <h2>Destinations Populaires</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="images/IMG_0769.JPG" alt="Rome"/>
-          <h3><a href="rome.html">Rome</a></h3>
-          <p>La ville éternelle, riche en histoire et en art.</p>
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#top">Accueil</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="card">
-          <img src="images/IMG_0768.JPG" alt="Venise"/>
-          <h3><a href="venise.html">Venise</a></h3>
-          <p>La cité flottante, romantique et mystérieuse.</p>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Voyages en Italie</h1>
+            <p>Découvrez les plus belles villes italiennes</p>
         </div>
-        <div class="card">
-          <img src="images/IMG_0770.JPG" alt="Florence"/>
-          <h3><a href="florence.html">Florence</a></h3>
-          <p>Berceau de la Renaissance et de l’architecture classique.</p>
+    </header>
+
+    <section id="galerie" class="galerie">
+        <div class="container">
+            <h2>Galerie Photo</h2>
+            <div class="galerie-container">
+                <div class="galerie-item">
+                    <img src="images/IMG_0769.JPG" alt="Rome">
+                </div>
+                <div class="galerie-item">
+                    <img src="images/IMG_0768.JPG" alt="Venise">
+                </div>
+                <div class="galerie-item">
+                    <img src="images/IMG_0770.JPG" alt="Florence">
+                </div>
+                <div class="galerie-item">
+                    <img src="images/IMG_0771.JPG" alt="Naples">
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <img src="images/IMG_0771.JPG" alt="Naples"/>
-          <h3><a href="naples.html">Naples</a></h3>
-          <p>Une ville vibrante entre mer et volcan.</p>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Destinations Populaires</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/IMG_0769.JPG" alt="Rome">
+                    <h3>Rome</h3>
+                    <p>La ville éternelle, riche en histoire et en art.</p>
+                </div>
+                <div class="card">
+                    <img src="images/IMG_0768.JPG" alt="Venise">
+                    <h3>Venise</h3>
+                    <p>La cité flottante, romantique et mystérieuse.</p>
+                </div>
+                <div class="card">
+                    <img src="images/IMG_0770.JPG" alt="Florence">
+                    <h3>Florence</h3>
+                    <p>Berceau de la Renaissance et de l’architecture classique.</p>
+                </div>
+                <div class="card">
+                    <img src="images/IMG_0771.JPG" alt="Naples">
+                    <h3>Naples</h3>
+                    <p>Une ville vibrante entre mer et volcan.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="gastronomie" class="gastronomie">
-    <div class="container">
-      <h2>Gastronomie Italienne</h2>
-      <p>Découvrez les saveurs uniques : pizzas, pâtes, vins toscans et plus encore.</p>
-    </div>
-  </section>
+    <!-- SECTION GASTRONOMIE -->
+    <section id="gastronomie" class="gastronomie">
+        <div class="container">
+            <h2>Gastronomie Italienne</h2>
+            <p>Découvrez les saveurs uniques des régions italiennes : pâtes fraîches, pizzas napolitaines, vins toscans et bien plus encore !</p>
+        </div>
+    </section>
 
-  <section id="blog" class="blog">
-    <div class="container">
-      <h2>Nos Derniers Articles</h2>
-      <p>Explorez Rome, Venise et la Toscane à travers nos récits de voyage.</p>
-    </div>
-  </section>
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Nos Derniers Articles</h2>
+            <div class="blog-posts">
+                <div class="post">
+                    <h3>Visiter Rome en 3 jours</h3>
+                    <p>Découvrez les meilleures choses à faire à Rome, entre histoire, art et culture...</p>
+                    <!-- Lien fictif vers l'article sur Rome -->
+                    <a href="https://www.voyagetips.com/visiter-rome-en-3-jours/?gclid=guideFRrome3j-kwdrome%20en%203%20jours-&gad_source=1&gad_campaignid=16764130030&gbraid=0AAAAACtPEB0y2xSYihErDSHwJUStP6FgZ&gclid=EAIaIQobChMI19Su4u2ijQMVv7VoCR3agS6MEAAYASAAEgIFqPD_BwE" target="_blank">Lire l'article complet sur Voyage Tips</a>
+                </div>
+                <div class="post">
+                    <h3>Les secrets de Venise</h3>
+                    <p>Explorez les mystères et les trésors cachés de Venise...</p>
+                    <!-- Lien fictif vers l'article sur Venise -->
+                    <a href="https://www.casavio.com/fr/blog/decouvrez-la-venise-secrete/">Lire l'article complet sur Casavio</a>
+                </div>
+                </div>
+                <div class="post">
+                    <h3>Les paysages de Toscane</h3>
+                    <p>Plongez dans les paysages magnifiques de la Toscane, entre collines verdoyantes et villages pittoresques...</p>
+                    <!-- Lien fictif vers l'article sur la Toscane -->
+                    <a href="https://www.okvoyage.com/post/paysages-de-toscane/">Lire l'article complet sur okvoyage </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="faq" class="faq">
-    <div class="container">
-      <h2>Questions Fréquemment Posées</h2>
-      <p><strong>Comment réserver ?</strong> Directement sur notre site via le bouton "Réserver".</p>
-      <p><strong>Moyens de transport ?</strong> Train, bus ou voiture selon votre préférence.</p>
-    </div>
-  </section>
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Questions Fréquemment Posées</h2>
+            <div class="faq-item">
+                <h3>Comment réserver un voyage ?</h3>
+                <p>Vous pouvez réserver votre voyage directement sur notre site en cliquant sur le bouton 'Réserver'.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quels sont les moyens de transport en Italie ?</h3>
+                <p>En Italie, vous pouvez voyager en train, bus, ou voiture. Nous recommandons le train pour un confort optimal.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Y a-t-il des hôtels à recommander ?</h3>
+                <p>Nous avons une liste d'hôtels recommandés dans chaque ville que vous pouvez consulter sur notre page de réservations.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="carte" class="carte">
-    <div class="container">
-      <h2>🌍 Carte & Lieux à découvrir en Italie</h2>
+    <section id="carte" class="carte">
+        <div class="container">
+            <h2>Carte des Destinations en Italie</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1WqznjM1jEj1k9zXxEYrRiKXmQ5s&hl=fr" width="100%" height="500"></iframe>
+            </div>
+        </div>
+    </section>
 
-      <div class="map-container">
-        <!-- Remplacez l'URL par l'image que vous utilisez -->
-        <img src="images/italy-map.jpg" alt="Carte de l'Italie" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
+    <!-- SECTION QUIZ -->
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2>Quel type de voyageur êtes-vous ?</h2>
+            <form id="quiz-form">
+                <label for="question1">Quel est ton type de vacances idéal ?</label>
+                <select id="question1" name="question1">
+                    <option value="plage">Plage</option>
+                    <option value="histoire">Histoire et culture</option>
+                    <option value="aventure">Aventure</option>
+                </select>
 
-      <div class="lieux">
-        <h3>🇮🇹 Rome</h3>
-        <ul>
-          <li>🧱 <strong>Colisée</strong> – Amphithéâtre antique</li>
-          <li>⛪ <strong>Basilique Saint-Pierre</strong> – Au Vatican</li>
-          <li>🍝 <strong>Quartier Trastevere</strong> – Ruelles et trattorias</li>
-        </ul>
+                <label for="question2">Quelle ambiance préfères-tu ?</label>
+                <select id="question2" name="question2">
+                    <option value="animee">Animée</option>
+                    <option value="relaxante">Relaxante</option>
+                    <option value="romantique">Romantique</option>
+                </select>
 
-        <h3>🇮🇹 Florence</h3>
-        <ul>
-          <li>🖼️ <strong>Galerie des Offices</strong> – Chef-d’œuvre de la Renaissance</li>
-          <li>🏰 <strong>Duomo de Florence</strong> – Coupole impressionnante</li>
-          <li>🍷 <strong>Trattoria Mario</strong> – Cuisine toscane</li>
-        </ul>
+                <button type="submit">Obtenir ma destination idéale</button>
+            </form>
+            <div id="resultat"></div>
+        </div>
+    </section>
 
-        <h3>🇮🇹 Naples</h3>
-        <ul>
-          <li>🏛️ <strong>Musée Archéologique</strong> – Artéfacts de Pompéi</li>
-          <li>🏰 <strong>Castel dell’Ovo</strong> – Fort sur la mer</li>
-          <li>🍕 <strong>Da Michele</strong> – Pizzeria célèbre</li>
-        </ul>
+    <footer>
+        <p>©️ 2025 - Voyages en Italie | Tous droits réservés</p>
+    </footer>
 
-        <h3>🇮🇹 Venise</h3>
-        <ul>
-          <li>📍 <strong>Place Saint-Marc</strong> – Cœur de Venise</li>
-          <li>🌉 <strong>Pont du Rialto</strong> – Vue sur le Grand Canal</li>
-          <li>🦐 <strong>Osteria alle Testiere</strong> – Fruits de mer raffinés</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
-  <footer style="background:#333; color:white; text-align:center; padding:20px;">
-    © 2025 Voyages en Italie – Tous droits réservés
-  </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("quiz-form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const question1 = document.getElementById("question1").value;
+                const question2 = document.getElementById("question2").value;
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
+                let destination = "";
+
+                if (question1 === "plage" && question2 === "animee") {
+                    destination = "Sicile – Plages et vie nocturne animée!";
+                } else if (question1 === "histoire" && question2 === "relaxante") {
+                    destination = "Florence – Culture et détente au cœur de la Toscane!";
+                } else if (question1 === "aventure" && question2 === "romantique") {
+                    destination = "Naples et Capri – Aventure et romantisme au bord de la mer!";
+                } else {
+                    destination = "Venez découvrir l'Italie, chaque région est unique!";
+                }
+
+                document.getElementById("resultat").innerHTML =
+                    "Ta destination idéale est : <strong>" + destination + "</strong>";
+            });
+        });
+    </script>
 
 </body>
 </html>
-
- 
